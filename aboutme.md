@@ -1,16 +1,18 @@
 ---
-layout: page
-title: About me
-subtitle: Why you'd want to go on a date with me
+title: About Me
+permalink: /about/
 ---
 
-My name is Inigo Montoya. I have the following qualities:
+Hi, I’m **Vakula Venkatesh** 👋  
 
-- I rock a great mustache
-- I'm extremely loyal to my family
+I’m pursuing my masster's at Stanford University with a focus on **Robotics & Autonomous Systems**. My interests lie in:
 
-What else do you need?
+- **Controls and Optimization** — decision-making under uncertainty, convex optimization, optimal and learning-based control  
+- **Computer Vision** — segmentation, pose estimation, real-time perception systems  
+- **Medical Robotics** — surgical assistance, catheter navigation, human–robot collaboration  
 
-### My story
+Outside of coursework, I’ve worked on projects including **autonomous ground mobile navigation**, **navigation in lung during bronchoscopy**, **real-time segmentation on the Da Vinci Surgical Robot** and expanding the bounds of assistive tech.  
 
-To be honest, I'm having some trouble remembering right now, so why don't you just watch [my movie](https://en.wikipedia.org/wiki/The_Princess_Bride_%28film%29) and it will answer **all** your questions.
+When I’m not building robotic systems, I enjoy sharing knowledge, mentoring, and thinking about how math and engineering can directly improve human health and safety.  
+
+layout: page
