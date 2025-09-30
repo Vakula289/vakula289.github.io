@@ -22,7 +22,7 @@ navbar-links:
   About Me: "aboutme"
   Projects: "projects"
   Resume: "cv"
-  Copy Email: "javascript:void(0)"
+  "📧 Copy Email": "javascript:void(0)"
 
 
 ################
