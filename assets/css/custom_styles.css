@@ -1,6 +1,13 @@
+.navbar-nav > .active > a {
+  color: #78d4f7 !important; 
+  font-weight: bold;
+  border-bottom: 2px solid #00A0C6;
+}
+
+
 /* Style for the email copy button - make it look like a distinct button */
 .navbar-nav #copy-email-btn {
-  background-color: #007bff !important;
+  background-color: #78d4f7 !important;
   color: white !important;
   border: none;
   border-radius: 8px;
@@ -17,7 +24,7 @@
 }
 
 .navbar-nav #copy-email-btn:hover {
-  background-color: #0056b3 !important;
+  background-color: #009ccf !important;
   color: white !important;
   transform: translateY(-1px);
   box-shadow: 0 4px 8px rgba(0, 123, 255, 0.4);
@@ -31,12 +38,12 @@
 
 /* Success state styling */
 .navbar-nav #copy-email-btn.copied {
-  background-color: #28a745 !important;
+  background-color: #b4fdc0 !important;
   color: white !important;
 }
 
 .navbar-nav #copy-email-btn.copied:hover {
-  background-color: #28a745 !important;
+  background-color: #b4fdc0 !important;
 }
 
 /* Ensure the parent nav-item aligns properly */
@@ -49,4 +56,32 @@
 .navbar-nav #copy-email-btn {
   margin-top: 0;
   margin-bottom: 0;
+}
+
+/* Avatar size override */
+.avatar-container img {
+  width: 200px;   /* increase this for larger size */
+  height: 200px;  /* keep it square for circle effect */
+  object-fit: cover; /* ensures face stays centered */
+}
+
+/* Center it nicely if needed */
+.avatar-container {
+  text-align: center;
+  margin: 20px auto;
+}
+
+/* Home/About page links - distinct style */
+.home-page a, .about-page a {
+  color: #0096C7;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.home-page a:hover, .about-page a:hover {
+  color: #6DD6F7;
+  background-color: #A8F0C0;
+  padding: 2px 4px;
+  border-radius: 4px;
+  transition: 0.2s ease;
 }
