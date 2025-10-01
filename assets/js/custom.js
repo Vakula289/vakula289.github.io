@@ -119,30 +119,34 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     });
   }
-});
+  
+  // Dark mode toggle functionality
+  const toggleBtn = document.getElementById('dark-mode-toggle');
+  console.log('Found dark mode toggle:', toggleBtn);
 
-document.addEventListener('DOMContentLoaded', function () {
-const toggleBtn = document.getElementById('dark-mode-toggle');
-
-if (toggleBtn) {
-  // Load saved mode
-  if (localStorage.getItem('dark-mode') === 'enabled') {
-    document.body.classList.add('dark-mode');
-    toggleBtn.textContent = '☀️';
-  }
-
-  toggleBtn.addEventListener('click', function (e) {
-    e.preventDefault();
-    document.body.classList.toggle('dark-mode');
-
-    if (document.body.classList.contains('dark-mode')) {
-      localStorage.setItem('dark-mode', 'enabled');
+  if (toggleBtn) {
+    // Load saved mode
+    if (localStorage.getItem('dark-mode') === 'enabled') {
+      document.body.classList.add('dark-mode');
       toggleBtn.textContent = '☀️';
-    } else {
-      localStorage.setItem('dark-mode', 'disabled');
-      toggleBtn.textContent = '🌙';
+      console.log('Dark mode enabled from localStorage');
     }
-  });
-}
+
+    toggleBtn.addEventListener('click', function (e) {
+      e.preventDefault();
+      console.log('Dark mode toggle clicked');
+      document.body.classList.toggle('dark-mode');
+
+      if (document.body.classList.contains('dark-mode')) {
+        localStorage.setItem('dark-mode', 'enabled');
+        toggleBtn.textContent = '☀️';
+        console.log('Dark mode enabled');
+      } else {
+        localStorage.setItem('dark-mode', 'disabled');
+        toggleBtn.textContent = '🌙';
+        console.log('Dark mode disabled');
+      }
+    });
+  }
 });
 

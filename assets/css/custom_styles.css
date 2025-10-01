@@ -103,18 +103,38 @@
   transition: 0.2s ease;
 }
 
+/* Dark mode CSS variables override */
+body.dark-mode {
+  --page-col: #121212;
+  --text-col: #f1f1f1;
+  --link-col: #4db8ff;
+  --hover-col: #66c2ff;
+  --navbar-col: #1c1c1c;
+  --navbar-text-col: #f1f1f1;
+  --navbar-border-col: #333;
+  --footer-col: #1c1c1c;
+  --footer-text-col: #f1f1f1;
+  --footer-link-col: #4db8ff;
+  --footer-hover-col: #66c2ff;
+}
+
 /* Dark mode base styles */
 body.dark-mode {
-  background-color: #121212;
-  color: #f1f1f1;
+  background-color: #121212 !important;
+  color: #f1f1f1 !important;
 }
 
+/* Dark mode links */
 body.dark-mode a {
-  color: #4db8ff;
+  color: #4db8ff !important;
 }
 
-body.dark-mode .navbar, 
-body.dark-mode .footer {
+body.dark-mode a:hover {
+  color: #66c2ff !important;
+}
+
+/* Dark mode navbar */
+body.dark-mode .navbar-custom {
   background-color: #1c1c1c !important;
   border-color: #333 !important;
 }
@@ -123,7 +143,73 @@ body.dark-mode .navbar .nav-link {
   color: #f1f1f1 !important;
 }
 
-body.dark-mode .navbar .nav-link.active {
+body.dark-mode .navbar-nav > .active > a {
   color: #4db8ff !important;
-  border-bottom: 2px solid #4db8ff;
+  border-bottom: 2px solid #4db8ff !important;
+}
+
+/* Dark mode main content areas */
+body.dark-mode .container-md,
+body.dark-mode .container-fluid,
+body.dark-mode main {
+  background-color: #121212 !important;
+  color: #f1f1f1 !important;
+}
+
+/* Dark mode headers */
+body.dark-mode h1, 
+body.dark-mode h2, 
+body.dark-mode h3, 
+body.dark-mode h4, 
+body.dark-mode h5, 
+body.dark-mode h6 {
+  color: #f1f1f1 !important;
+}
+
+/* Dark mode header section */
+body.dark-mode .intro-header {
+  background-color: #1c1c1c !important;
+}
+
+body.dark-mode .page-heading,
+body.dark-mode .post-heading {
+  color: #f1f1f1 !important;
+}
+
+body.dark-mode .page-subheading,
+body.dark-mode .post-subheading {
+  color: #cccccc !important;
+}
+
+/* Dark mode footer */
+body.dark-mode .footer {
+  background-color: #1c1c1c !important;
+  border-color: #333 !important;
+  color: #f1f1f1 !important;
+}
+
+body.dark-mode .footer a {
+  color: #4db8ff !important;
+}
+
+/* Dark mode home page content */
+body.dark-mode .home-page a, 
+body.dark-mode .about-page a {
+  color: #4db8ff !important;
+}
+
+body.dark-mode .home-page a:hover, 
+body.dark-mode .about-page a:hover {
+  color: #66c2ff !important;
+  background-color: #2d4a3d !important;
+}
+
+/* Dark mode toggle button styling */
+#dark-mode-toggle {
+  font-size: 1.2em;
+  transition: all 0.3s ease;
+}
+
+#dark-mode-toggle:hover {
+  transform: scale(1.1);
 }
