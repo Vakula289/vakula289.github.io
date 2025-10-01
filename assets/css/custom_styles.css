@@ -58,51 +58,23 @@
   margin-bottom: 0;
 }
 
-/* Override theme avatar styles - make it large and properly positioned */
-.navbar-custom .avatar-container {
-  position: static !important;
-  left: auto !important;
-  width: 250px !important;
-  bottom: auto !important;
-  text-align: center !important;
-  margin: 30px auto !important;
-  display: flex !important;
-  justify-content: center !important;
-  align-items: center !important;
-  opacity: 1 !important;
-  visibility: visible !important;
+/* Custom Avatar Section - bypassing theme completely */
+.custom-avatar-section {
+  text-align: center;
+  margin: 40px auto;
+  padding: 20px;
 }
 
-/* Avatar border container - override theme styles */
-.navbar-custom .avatar-container .avatar-img-border {
-  width: 250px !important;
-  height: 250px !important;
-  border-radius: 50% !important;
-  overflow: hidden !important;
-  margin: 0 auto !important;
-  margin-left: 0 !important;
-  border: 4px solid #78d4f7 !important;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
-  display: flex !important;
-  justify-content: center !important;
-  align-items: center !important;
-  background-color: #f8f9fa !important;
-}
-
-/* Avatar image - override theme styles */
-.navbar-custom .avatar-container .avatar-img {
-  width: 240px !important;
-  height: 240px !important;
-  object-fit: contain !important;
-  object-position: center !important;
-  border-radius: 50% !important;
-  display: block !important;
-  background-color: transparent !important;
-}
-
-/* Ensure avatar shows on expanded nav too */
-.navbar-custom.top-nav-expanded .avatar-container {
-  display: flex !important;
+.custom-avatar {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  border: 4px solid #78d4f7;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  margin: 0 auto;
 }
 
 /* Alternative: If you want to crop to show face better, use this instead */
