@@ -1,15 +1,37 @@
 // Wait for DOM to load
 document.addEventListener('DOMContentLoaded', function() {
-  // Find the Email link in navbar
-  const contactLink = document.querySelector('a[href="#copy-email"]');
+  console.log('DOM loaded, looking for copy email button...');
+  
+  // Find the Email button in navbar by ID
+  const contactLink = document.querySelector('#copy-email-btn');
+  console.log('Found copy email button:', contactLink);
   
   if (contactLink) {
+    console.log('Setting up copy email functionality...');
     // Change the text to look like a button
     contactLink.innerHTML = 'Copy Email';
+    contactLink.setAttribute('data-email-setup', 'true');
     
-    // Add click event to copy email
-    contactLink.addEventListener('click', function(e) {
+    // Set up the click handler
+    setupEmailCopy(contactLink);
+  } else {
+    console.log('Copy email button not found on DOM load, trying again in 500ms...');
+    // Fallback: try again after a short delay
+    setTimeout(function() {
+      const delayedContactLink = document.querySelector('#copy-email-btn');
+      console.log('Delayed search found copy email button:', delayedContactLink);
+      if (delayedContactLink && !delayedContactLink.hasAttribute('data-email-setup')) {
+        delayedContactLink.setAttribute('data-email-setup', 'true');
+        delayedContactLink.innerHTML = 'Copy Email';
+        setupEmailCopy(delayedContactLink);
+      }
+    }, 500);
+  }
+  
+  function setupEmailCopy(button) {
+    button.addEventListener('click', function(e) {
       e.preventDefault();
+      console.log('Copy email button clicked!');
       
       // Your email address
       const email = 'vakula289@gmail.com';
@@ -21,30 +43,35 @@ document.addEventListener('DOMContentLoaded', function() {
         // Try modern clipboard API first
         if (navigator.clipboard && window.isSecureContext) {
           navigator.clipboard.writeText(text).then(function() {
+            console.log('Email copied successfully via Clipboard API');
             showSuccessMessage();
           }).catch(function(err) {
             console.error('Clipboard API failed: ', err);
             fallbackCopy(text);
           });
         } else {
+          console.log('Using fallback copy method');
           // Use fallback method
           fallbackCopy(text);
         }
       }
       
       function showSuccessMessage() {
-        const originalText = contactLink.innerHTML;
-        contactLink.innerHTML = '✓ Email Copied!';
-        contactLink.classList.add('copied');
+        const originalText = button.innerHTML;
+        button.innerHTML = '✓ Email Copied!';
+        button.classList.add('copied');
+        console.log('Showing success message');
         
         // Reset after 2.5 seconds
         setTimeout(function() {
-          contactLink.innerHTML = originalText;
-          contactLink.classList.remove('copied');
+          button.innerHTML = originalText;
+          button.classList.remove('copied');
+          console.log('Reset button to original state');
         }, 2500);
       }
       
       function fallbackCopy(text) {
+        console.log('Attempting fallback copy...');
         // Create a temporary textarea element
         const textarea = document.createElement('textarea');
         textarea.value = text;
@@ -62,6 +89,7 @@ document.addEventListener('DOMContentLoaded', function() {
         
         try {
           const successful = document.execCommand('copy');
+          console.log('execCommand copy result:', successful);
           if (successful) {
             showSuccessMessage();
           } else {
@@ -77,15 +105,16 @@ document.addEventListener('DOMContentLoaded', function() {
       }
       
       function showFailureMessage(email) {
-        const originalText = contactLink.innerHTML;
-        contactLink.innerHTML = 'Copy Failed - Click Again';
-        contactLink.style.backgroundColor = '#dc3545';
+        const originalText = button.innerHTML;
+        button.innerHTML = 'Copy Failed - Click Again';
+        button.style.backgroundColor = '#dc3545';
+        console.log('Showing failure message');
         
         // Also show alert with email
         setTimeout(function() {
           alert('Could not copy automatically. Here\'s the email:\n\n' + email);
-          contactLink.innerHTML = originalText;
-          contactLink.style.backgroundColor = '';
+          button.innerHTML = originalText;
+          button.style.backgroundColor = '';
         }, 1000);
       }
     });
