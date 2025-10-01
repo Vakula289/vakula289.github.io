@@ -58,36 +58,22 @@
   margin-bottom: 0;
 }
 
-/* Avatar size override - large perfect circle */
-.avatar-container img {
-  width: 250px;   
-  height: 250px;  
-  object-fit: contain; /* Shows full image, may have padding */
-  object-position: center;
-  border-radius: 50% !important;
-  border: 4px solid #78d4f7;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-  display: block;
-  margin: 0 auto;
-  background-color: #f8f9fa; /* Light background for any empty space */
-}
-
-/* Center the avatar container */
-.avatar-container {
-  text-align: center;
-  margin: 30px auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-/* Ensure the avatar border container is also circular */
 .avatar-img-border {
-  border-radius: 50% !important;
+  border-radius: 50%;
   width: 250px;
   height: 250px;
   overflow: hidden;
   margin: 0 auto;
+  border: 4px solid #78d4f7;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.avatar-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;  /* instead of contain */
+  border-radius: 50%;
+  display: block;
 }
 
 /* Home/About page links - distinct style */

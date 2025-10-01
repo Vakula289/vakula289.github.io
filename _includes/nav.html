@@ -25,12 +25,8 @@
             </div>
           </li>
         {% else %}
-          <li class="nav-item {% if (page.url == "/" and link[1] == "") or page.url == link[1] %}active{% endif %}">
-            {% if link[1] == "" %}
-              <a class="nav-link" href="{{ '/' | relative_url }}">{{ link[0] }}</a>
-            {% else %}
-              <a class="nav-link" href="{{ link[1] | relative_url }}">{{ link[0] }}</a>
-            {% endif %}
+          <li class="nav-item {% if page.url contains link[1] %}active{% endif %}">
+            <a class="nav-link" href="{{ link[1] | relative_url }}">{{ link[0] }}</a>
           </li>
         {%- endif -%}
       {%- endfor -%}

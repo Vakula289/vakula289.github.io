@@ -18,5 +18,3 @@ My interests largely lie in:
 Outside of coursework, I’ve worked on projects including **autonomous ground mobile navigation**, **navigation in lung during bronchoscopy**, **real-time segmentation on the Da Vinci Surgical Robot** and expanding the bounds of assistive tech.  
 
 When I’m not building robotic systems, I enjoy sharing knowledge, mentoring, and thinking about how math and engineering can directly improve human health and safety.  
-
-layout: page
