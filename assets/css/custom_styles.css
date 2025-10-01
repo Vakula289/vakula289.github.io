@@ -1,16 +1,30 @@
 /* Style for the email copy button */
-.navbar-nav a[href="contact"] {
+.navbar-nav a[href="#copy-email"] {
   cursor: pointer;
   transition: all 0.3s ease;
+  position: relative;
 }
 
-.navbar-nav a[href="contact"]:hover {
+.navbar-nav a[href="#copy-email"]:hover {
   transform: scale(1.05);
-}
-
-/* Optional: Add a subtle background on hover */
-.navbar-nav a[href="contact"]:hover {
   background-color: rgba(0, 138, 255, 0.1);
   border-radius: 4px;
   padding: 5px 10px;
+}
+
+/* Add a subtle tooltip effect */
+.navbar-nav a[href="#copy-email"]:hover::after {
+  content: 'Click to copy email';
+  position: absolute;
+  bottom: -25px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #333;
+  color: white;
+  padding: 2px 8px;
+  border-radius: 3px;
+  font-size: 12px;
+  white-space: nowrap;
+  opacity: 0.9;
+  z-index: 1000;
 }

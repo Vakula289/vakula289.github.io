@@ -1,7 +1,7 @@
 // Wait for DOM to load
 document.addEventListener('DOMContentLoaded', function() {
-  // Find the Contact link in navbar
-  const contactLink = document.querySelector('a[href="contact"]');
+  // Find the Email link in navbar
+  const contactLink = document.querySelector('a[href="#copy-email"]');
   
   if (contactLink) {
     // Change the text to include emoji
@@ -15,8 +15,20 @@ document.addEventListener('DOMContentLoaded', function() {
       const email = 'vakula289@gmail.com';
       
       // Copy to clipboard
-      navigator.clipboard.writeText(email).then(function() {
-        // Show success message
+      if (navigator.clipboard && window.isSecureContext) {
+        // Use modern clipboard API
+        navigator.clipboard.writeText(email).then(function() {
+          showSuccessMessage();
+        }).catch(function(err) {
+          console.error('Failed to copy email: ', err);
+          fallbackCopy(email);
+        });
+      } else {
+        // Fallback for older browsers or non-secure contexts
+        fallbackCopy(email);
+      }
+      
+      function showSuccessMessage() {
         const originalText = contactLink.innerHTML;
         contactLink.innerHTML = '✓ Email Copied!';
         contactLink.style.color = '#28a745';
@@ -26,10 +38,27 @@ document.addEventListener('DOMContentLoaded', function() {
           contactLink.innerHTML = originalText;
           contactLink.style.color = '';
         }, 2000);
-      }).catch(function(err) {
-        console.error('Failed to copy email: ', err);
-        alert('Email: ' + email);
-      });
+      }
+      
+      function fallbackCopy(text) {
+        // Create a temporary textarea element
+        const textarea = document.createElement('textarea');
+        textarea.value = text;
+        textarea.style.position = 'fixed';
+        textarea.style.opacity = '0';
+        document.body.appendChild(textarea);
+        textarea.select();
+        
+        try {
+          document.execCommand('copy');
+          showSuccessMessage();
+        } catch (err) {
+          console.error('Fallback copy failed: ', err);
+          alert('Email: ' + text + '\n\nCopy failed, but here\'s the email address!');
+        } finally {
+          document.body.removeChild(textarea);
+        }
+      }
     });
   }
 });
