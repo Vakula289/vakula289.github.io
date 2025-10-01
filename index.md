@@ -3,8 +3,6 @@ layout: home
 title: "Vakula Venkatesh"
 subtitle: "Robotics • Computer Vision • Controls"
 css-class: "home-page"
-before-content:
-  - custom-avatar.html
 ---
 
 Welcome to my portfolio!  
