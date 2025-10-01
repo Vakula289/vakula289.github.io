@@ -1,0 +1,16 @@
+/* Style for the email copy button */
+.navbar-nav a[href="contact"] {
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.navbar-nav a[href="contact"]:hover {
+  transform: scale(1.05);
+}
+
+/* Optional: Add a subtle background on hover */
+.navbar-nav a[href="contact"]:hover {
+  background-color: rgba(0, 138, 255, 0.1);
+  border-radius: 4px;
+  padding: 5px 10px;
+}
