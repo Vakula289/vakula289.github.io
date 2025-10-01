@@ -58,6 +58,16 @@
   margin-bottom: 0;
 }
 
+/* Avatar container styling */
+.avatar-container {
+  text-align: center;
+  margin: 30px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Avatar border container - perfect circle */
 .avatar-img-border {
   border-radius: 50%;
   width: 250px;
@@ -66,15 +76,34 @@
   margin: 0 auto;
   border: 4px solid #78d4f7;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f8f9fa;
 }
 
-.avatar-container img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;  /* instead of contain */
+/* Avatar image - show full image without cropping */
+.avatar-container img, .avatar-img-border img {
+  width: 240px;
+  height: 240px;
+  object-fit: contain;  /* Shows full image */
+  object-position: center;
+  border-radius: 50%;
+  display: block;
+  background-color: transparent;
+}
+
+/* Alternative: If you want to crop to show face better, use this instead */
+/*
+.avatar-container img, .avatar-img-border img {
+  width: 240px;
+  height: 240px;
+  object-fit: cover;
+  object-position: center top;
   border-radius: 50%;
   display: block;
 }
+*/
 
 /* Home/About page links - distinct style */
 .home-page a, .about-page a {
