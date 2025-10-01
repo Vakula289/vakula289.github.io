@@ -156,8 +156,8 @@ site-css:
   - "/assets/css/custom_styles.css"
 
 # If you have common JavaScript files that should be included in every page, list them here
-#site-js:
-#  - "/assets/js/custom-script.js"
+site-js:
+ - "/assets/js/custom-script.js"
 
 #################################
 # --- Web Analytics Section --- #
@@ -293,8 +293,6 @@ plugins:
   - jekyll-paginate
   - jekyll-sitemap
 
-site-js:
-  - "/assets/js/custom.js"
   
 # Beautiful Jekyll / Dean Attali
 # 2fc73a3a967e97599c9763d05e564189
