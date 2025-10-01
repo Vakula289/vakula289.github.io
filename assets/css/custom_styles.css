@@ -4,14 +4,16 @@
   color: white !important;
   border: none;
   border-radius: 8px;
-  padding: 8px 16px !important;
-  margin: 0 5px;
+  padding: 0.375rem 0.75rem !important;
+  margin: 0 0.25rem;
   font-weight: 500;
   text-decoration: none !important;
   cursor: pointer;
   transition: all 0.3s ease;
   box-shadow: 0 2px 4px rgba(0, 123, 255, 0.3);
   display: inline-block;
+  vertical-align: baseline;
+  align-self: center;
 }
 
 .navbar-nav #copy-email-btn:hover {
@@ -35,4 +37,16 @@
 
 .navbar-nav #copy-email-btn.copied:hover {
   background-color: #28a745 !important;
+}
+
+/* Ensure the parent nav-item aligns properly */
+.navbar-nav li:has(#copy-email-btn) {
+  display: flex;
+  align-items: center;
+}
+
+/* Fallback for browsers that don't support :has() */
+.navbar-nav #copy-email-btn {
+  margin-top: 0;
+  margin-bottom: 0;
 }
