@@ -58,19 +58,18 @@
   margin-bottom: 0;
 }
 
-/* Custom Avatar Section - bypassing theme completely */
+/* Custom Avatar Section - clean and simple */
 .custom-avatar-section {
   text-align: center;
-  margin: 40px auto;
-  padding: 20px;
+  margin: 20px auto 30px auto;
+  padding: 0;
 }
 
 .custom-avatar {
   width: 250px;
   height: 250px;
   border-radius: 50%;
-  border: 4px solid #78d4f7;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   object-fit: cover;
   object-position: center;
   display: block;

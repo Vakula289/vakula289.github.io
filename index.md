@@ -3,11 +3,9 @@ layout: home
 title: "Vakula Venkatesh"
 subtitle: "Robotics • Computer Vision • Controls"
 css-class: "home-page"
+before-content:
+  - custom-avatar.html
 ---
-
-<div class="custom-avatar-section">
-  <img src="/assets/img/header_img.jpg" alt="Vakula Venkatesh" class="custom-avatar">
-</div>
 
 Welcome to my portfolio!  
 I’m a Grad student in Mechanical Engineering at Stanford specializing in **robotics and autonomous systems**. I enjoy building in the **learning-based controls** and **perception** spaces.
