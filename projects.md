@@ -82,6 +82,64 @@ css-class: "projects-page"
     </div>
   </div>
 
-</div>
+  <div class="project-tile" onclick="location.href='/projects/precise-motor-control'">
+    <div class="project-image">
+      <img src="/assets/img/thumb.png" alt="Precise Motor Control Project">
+    </div>
+    <div class="project-content">
+      <h3>⚙️ Precise Motor Control</h3>
+      <p class="project-subtitle">BLDC control for knee-joint rehabilitation</p>
+      <div class="project-tags">
+        <span class="tag">Control Systems</span>
+        <span class="tag">Embedded</span>
+        <span class="tag">Mechatronics</span>
+      </div>
+    </div>
+  </div>
 
----
+  <div class="project-tile" onclick="location.href='/projects/monarch-systems'">
+    <div class="project-image">
+      <img src="/assets/img/thumb.png" alt="Monarch Systems Internship">
+    </div>
+    <div class="project-content">
+      <h3>🧭 Monarch Systems — Robotics & Controls Intern</h3>
+      <p class="project-subtitle">Monarch Systems, Johnson & Johnson MedTech — June 2025 – Present</p>
+      <div class="project-tags">
+        <span class="tag">Data Analysis</span>
+        <span class="tag">Optimization</span>
+        <span class="tag">Medical Robotics</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="project-tile" onclick="location.href='/projects/wearable-motion-prediction'">
+    <div class="project-image">
+      <img src="/assets/img/thumb.png" alt="Wearable Motion Prediction">
+    </div>
+    <div class="project-content">
+      <h3>🎓 Wearable Motion Prediction (MS Research)</h3>
+      <p class="project-subtitle">Assistive Robotics Lab, Stanford — Sept. 2024 – Present</p>
+      <div class="project-tags">
+        <span class="tag">Computer Vision</span>
+        <span class="tag">Pose Estimation</span>
+        <span class="tag">Wearables</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="project-tile" onclick="location.href='/projects/mobile-robotics-research'">
+    <div class="project-image">
+      <img src="/assets/img/thumb.png" alt="Mobile Robotics Research">
+    </div>
+    <div class="project-content">
+      <h3>🤖 Mobile Robotics Research Intern</h3>
+      <p class="project-subtitle">Autonomous Control Lab, Univ. of Victoria — May 2023 – Aug 2023</p>
+      <div class="project-tags">
+        <span class="tag">ROS</span>
+        <span class="tag">SLAM</span>
+        <span class="tag">Navigation</span>
+      </div>
+    </div>
+  </div>
+
+</div>
