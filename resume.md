@@ -4,40 +4,42 @@ title: Resume
 permalink: /cv/
 ---
 
----
-
-<!-- resume styles are included in /assets/css/custom_styles.css (site-css in _config.yml) -->
+<div class="resume-header">
+  <div class="pdf-download">
+    <a href="/assets/VakulaVenkatesh_Resume.pdf" download title="Download PDF Resume">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M12 3v10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M8 7l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M21 21H3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      Download Resume (PDF)
+    </a>
+  </div>
+</div>
 
 <div class="resume-container">
 
-	<aside class="resume-aside">
-		<div class="side-nav" aria-label="Resume navigation">
-			<div class="pdf-download">
-				<a href="/assets/VakulaVenkatesh_Resume.pdf" download title="Download PDF Resume">
-					<svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M12 3v10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M8 7l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M21 21H3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-				</a>
-				<a href="/assets/VakulaVenkatesh_Resume.pdf" download>Download Resume (PDF)</a>
-			</div>
+  <div class="resume-header">
+    <div class="pdf-download">
+      <a href="/assets/VakulaVenkatesh_Resume.pdf" download title="Download PDF Resume">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M12 3v10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M8 7l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M21 21H3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Download Resume (PDF)
+      </a>
+    </div>
+  </div>
 
-			<nav>
-				<a href="#my-info" class="active">My Info</a>
-				<a href="#education">Education</a>
-				<a href="#technical-experience">Technical Experience</a>
-				<a href="#scholarships-awards">Scholarships & Awards</a>
-				<a href="#related-coursework">Related Coursework</a>
-			</nav>
-		</div>
-	</aside>
+  <aside class="resume-aside">
+    <div class="side-nav" aria-label="Resume navigation">
+      <nav>
+        <a href="#my-info" class="active">My Info</a>
+        <a href="#education">Education</a>
+        <a href="#technical-experience">Technical Experience</a>
+        <a href="#scholarships-awards">Scholarships & Awards</a>
+        <a href="#related-coursework">Related Coursework</a>
+      </nav>
+    </div>
+  </aside>
 
-	<main class="resume-main">
-
-	<section id="my-info">
-  
-	# 📄 Resume – Vakula Venkatesh
-
-	[📥 Download PDF Version](/assets/VakulaVenkatesh_Resume.pdf)
-
-	---
+  <main class="resume-main">
+    <section id="my-info">
+      # Resume – Vakula Venkatesh
+      ---
 
 	</section>
 

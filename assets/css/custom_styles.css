@@ -326,6 +326,18 @@ body.dark-mode .project-subtitle {
 }
 
 /* --- Resume styles appended --- */
+/* Typography */
+body {
+  font-family: 'Lato', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-weight: 600;
+}
+
 /* Resume Layout */
 .resume-container {
   display: flex;
@@ -367,6 +379,7 @@ body.dark-mode .project-subtitle {
   text-decoration: none;
   font-weight: 500;
   font-size: 0.95rem;
+  font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
 .side-nav .pdf-download a:first-child {
@@ -388,6 +401,8 @@ body.dark-mode .project-subtitle {
   text-decoration: none;
   transition: all 0.2s ease;
   font-size: 0.95rem;
+  font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-weight: 500;
 }
 
 .side-nav nav a:hover {
@@ -413,24 +428,29 @@ body.dark-mode .project-subtitle {
 }
 
 .resume-main h1 {
-  font-size: 2.2rem;
+  font-size: 2.4rem;
   margin: 0 0 10px 0;
   color: #2c3e50;
+  font-weight: 700;
+  letter-spacing: -0.02em;
 }
 
 .resume-main h2 {
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   margin: 0 0 20px 0;
   color: #2c3e50;
   display: flex;
   align-items: center;
   gap: 8px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
 }
 
 .resume-main h3 {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   margin: 25px 0 5px 0;
   color: #2c3e50;
+  font-weight: 500;
 }
 
 .resume-main p {

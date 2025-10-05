@@ -1,0 +1,121 @@
+/* Resume styles */
+.resume-header {
+  position: relative;
+  margin-bottom: 32px;
+}
+
+.resume-header .pdf-download {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.resume-header .pdf-download a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  background: #0066cc;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.resume-header .pdf-download a:hover {
+  background: #0052a3;
+}
+
+.resume-container {
+  display: flex;
+  gap: 32px;
+  align-items: flex-start;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.resume-aside {
+  width: 320px;
+  flex: 0 0 320px;
+}
+
+.resume-main {
+  flex: 1;
+  min-width: 0;
+  max-width: 800px;
+}
+
+.side-nav {
+  position: sticky;
+  top: 24px;
+  padding: 24px;
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+}
+
+.side-nav nav a {
+  display: block;
+  padding: 10px 12px;
+  border-radius: 6px;
+  color: #333;
+  text-decoration: none;
+  margin: 8px 0;
+  transition: all 0.2s ease;
+}
+
+.side-nav nav a:hover {
+  background: #f5f5f5;
+}
+
+.side-nav nav a.active {
+  background: #0066cc;
+  color: #fff;
+}
+
+.section-heading {
+  margin-top: 0;
+  color: #333;
+}
+
+@media (max-width: 900px) {
+  .resume-container {
+    flex-direction: column;
+    padding: 0 16px;
+  }
+  
+  .resume-aside {
+    width: 100%;
+  }
+  
+  .side-nav {
+    position: relative;
+    margin-bottom: 32px;
+  }
+  
+  .resume-main {
+    max-width: 100%;
+  }
+  
+  .resume-header {
+    margin-bottom: 24px;
+    padding: 0 16px;
+  }
+  
+  .resume-header .pdf-download {
+    position: relative;
+    margin-bottom: 16px;
+  }
+  
+  .resume-header .pdf-download a {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
